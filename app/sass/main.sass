@@ -159,11 +159,100 @@
         right: 60px
     h2
         margin-top: 0
+        margin-bottom: 40px
+.ready-right
+    padding-left: 40px
+.formsection
+    padding: 30px 0
+    background-color: $dark
+    input
+        background-color: lighten($dark,6%)
+    form 
+        grid-gap: $gutter
+        grid-template-columns: repeat(4,1fr)
+    .button
+        font-size: 17px
+        padding: 14.5px
+        width: 100%
+
+input,textarea
+    border: none
+    padding: 15px 20px
+    width: 100%
+    font-family: Arial, sans-serif
+    outline: none
+    transition: background-color .25s ease
+    &:focus
+        background-color: $light
+    &::placeholder
+        color: lighten($dark,20% )
 
 
+.section-blog
+    h2 
+        margin: 
+            top: 0
+            bottom: 50px
 
+.blog-home
+    grid-gap: $gutter
+    grid-template-columns: repeat(4,1fr)
+.blog-item
+    background-color: #f7f7f7
+    text-decoration: none
+    grid-template-rows: 1fr 1fr
+    transition: background-color .25s ease
+    overflow: hidden
+    color: #333
+    text-align: center
+    &:nth-child(3)
+        grid-column: 3 / 5
+    &:nth-child(4)
+        grid-column: 1 / 3
+    &:hover
+        background-color: $light
+        h4 
+            color: $dark
+        .blog-item-img
+            transform: scale(1.05) translateY(-10px)
 
+    &-img
+        height: 370px
+        background-size: cover
+        background-position: center
+        transition: transform .25s ease
+    &-content
+        padding: 25px
+        text-align: center
+        align-content: center
+    h4 
+        font-size: 18px
+        color: #666
+        line-height: 1.3
+        margin: 0
+        transition: color .25s ease
+    p 
+        margin:
+            top: 0
 
-// Пользовательские стили
+.main-footer
+    padding: 60px 0
+    background-color: darken($dark,8%)
+    text-align: center
+    color: #4E5355
+.footer-logo
+    font-family: intro-grid, sans-serif
+    font-size: 22px
+    line-height: 1.16
+    span 
+        display: block
+        color: #707476
+        font-size: 27px
+.footer-copy
+    font-size: 20px
+    font-weight: bold
+    color: #494d50
+    margin-top: 20px
+
 
 @import "media" // Всегда в конце
